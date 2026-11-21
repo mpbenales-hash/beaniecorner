@@ -1,0 +1,78 @@
+/* Core Page Styles & Colors */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+/* Typography (using rem units) */
+h1 {
+    font-size: 2.25rem; /* ~36px */
+    color: #1a252f;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem; /* ~24px */
+    color: #2980b9;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.3rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem; /* ~20px */
+}
+
+p, li {
+    font-size: 1rem; /* ~16px baseline */
+}
+
+/* Flexbox Layout: Photo + Bio */
+.bio-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    padding: 1.5rem;          /* Box Model: Padding */
+    border: 1px solid #cbd5e1; /* Box Model: Border */
+    border-radius: 8px;
+    margin-top: 1rem;         /* Box Model: Margin */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #2980b9;
+}
+
+/* Card Container Styling */
+.project-card {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Responsive Media Query (Stack on screens <= 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    .bio-container {
+        flex-direction: column; /* Stacks image above bio text */
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
